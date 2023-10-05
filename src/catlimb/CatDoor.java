@@ -18,6 +18,10 @@ public class CatDoor {
         return doorMode;
     }
 
+    public Cat[] getCatsInMemory(){
+        return catsInMemory;
+    }
+
     public boolean goingOut(){
         if (doorMode == Modi.CLOSED || doorMode == Modi.ONLY_IN) {
             return false;
@@ -30,9 +34,6 @@ public class CatDoor {
             if (Arrays.asList(catsInMemory).contains(cat)){
                 return true;}
         else return false;
-    }
-    public Cat[] getCatsInMemory(){
-      return catsInMemory;
     }
 
     public void addMemory(Cat cat){
